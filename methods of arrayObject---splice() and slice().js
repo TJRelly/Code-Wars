@@ -9,3 +9,15 @@ function threeInOne(arr){
     }
     return res
   }
+
+  function threeInOne(arr){
+    let splitted = []
+    
+    for (let i = 0; i < arr.length; i+=3) {
+      splitted.push(arr.slice(i, i + 3))
+    }
+    
+    let res = splitted.map(arr=>arr.reduce((a, c) => a + c, 0))
+   
+    return res
+  }
