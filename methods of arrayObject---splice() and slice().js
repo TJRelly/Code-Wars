@@ -26,7 +26,6 @@ function threeInOne(arr){
     let res = []
     for (let i = 0; i < arr.length; i+=3){
       let sliced = arr.slice(i, i + 3)
-      console.log(sliced.reduce((a, c) => a + c, 0))
       res.push(sliced.reduce((a, c) => a + c, 0))
     }
     return res
