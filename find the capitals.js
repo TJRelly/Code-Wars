@@ -7,3 +7,8 @@ var capitals = function (word) {
   }
   return indexes
 };
+
+var capitals = function (word) {
+	let res = [...word].filter((letter) => letter === letter.toUpperCase() ? letter : "" ).map(letter => word.indexOf(letter))
+  return res
+};
