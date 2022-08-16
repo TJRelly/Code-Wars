@@ -5,4 +5,8 @@ function gimme (arr) {
   return arr.indexOf(+mid)
 }
 
+function gimme(arr) {
+  return arr.indexOf(arr.concat().sort((a, b) => a - b)[1])
+}
+
 const gimme = (arr) => arr.indexOf(arr.concat().sort((a, b) => a - b)[1])
