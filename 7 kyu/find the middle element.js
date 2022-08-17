@@ -5,3 +5,4 @@ function gimme (arr) {
   return arr.indexOf(+mid)
 }
 
+const gimme = (arr) => arr.indexOf(arr.concat().sort((a, b) => a - b)[1])
