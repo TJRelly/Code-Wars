@@ -21,3 +21,16 @@ let students = [
 
 // let sum = students.reduce((acc, curr) => acc + curr.score, 0)
 
+// map and reduce
+// students.forEach(stu => stu.score < 60 ? stu.score += 20 : stu.score)
+// let overSixtySum = students.reduce((acc, curr) => acc + curr.score, 0)
+
+let overSixty = students
+    .map(stu => {
+        if (stu.score < 60) stu.score += 20
+        return stu
+    })
+    .filter(stu => stu.score > 60)
+    .reduce((a, c) => a + c.score, 0)
+
+console.log(overSixty)
