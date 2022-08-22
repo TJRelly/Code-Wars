@@ -1,9 +1,18 @@
 let students = [
     { name: 'Max', id: 31, score: 80 },
-    { name: 'Kate', id: 15, score: 69 },
+    { name: 'Kylie', id: 15, score: 69 },
     { name: 'Treyvon', id: 16, score: 35 },
     { name: 'Lisa', id: 7, score: 55 }
 ]
+
+let sum = students.map(stu => {
+    if (stu.score < 60) stu.score += 20
+    return stu
+})
+.filter(stu => stu.score > 60)
+.reduce((a, c) => a + c.score, 0)
+
+console.log(sum)
 
 // let names = []
 // for (let i = 0; i < students.length; i++){
@@ -25,12 +34,12 @@ let students = [
 // students.forEach(stu => stu.score < 60 ? stu.score += 20 : stu.score)
 // let overSixtySum = students.reduce((acc, curr) => acc + curr.score, 0)
 
-let overSixty = students
-    .map(stu => {
-        if (stu.score < 60) stu.score += 20
-        return stu
-    })
-    .filter(stu => stu.score > 60)
-    .reduce((a, c) => a + c.score, 0)
+// let overSixty = students
+//     .map(stu => {
+//         if (stu.score < 60) stu.score += 20
+//         return stu
+//     })
+//     .filter(stu => stu.score > 60)
+//     .reduce((a, c) => a + c.score, 0)
 
-console.log(overSixty)
+// console.log(overSixty)
