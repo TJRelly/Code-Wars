@@ -4,8 +4,6 @@ const reverse = str => {
     return str.split('').reverse().join('')
 }
 
-console.log(reverse(str))
-
 const reverse2 = str => {
     let reversed = []
     if (typeof (str) !== 'string') console.log('error')
@@ -17,4 +15,6 @@ const reverse2 = str => {
     return reversed.join('')
 }
 
-console.log(reverse2('Hi World!'))
+const reverse3 = str => str.split('').reverse().join('') 
+
+console.log(reverse3(str))
