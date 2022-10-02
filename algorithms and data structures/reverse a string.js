@@ -6,4 +6,15 @@ const reverse = str => {
 
 console.log(reverse(str))
 
-const reverse2
+const reverse2 = str => {
+    let reversed = []
+    if (typeof (str) !== 'string') console.log('error')
+    else {
+        for (let i = 1; i <= str.length; i++) {
+            reversed.push(str[str.length - i])
+        }
+    }
+    return reversed.join('')
+}
+
+console.log(reverse2('Hi World!'))
