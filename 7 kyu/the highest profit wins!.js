@@ -1,10 +1,10 @@
-function minMax(arr){
+function minMax1(arr){
     let min = Math.min(...arr)
     let max = Math.max(...arr)
     return [min, max]; // fix me!
   }
 
-  const minMax = arr => {
+  const minMax2 = arr => {
     let min = Math.min(...arr)
     let max = Math.max(...arr)
     return [min, max]
