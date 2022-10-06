@@ -2,12 +2,11 @@
 // will the nums be in order?
 // keep the same order
 
-let array = [1, 2, 3, 1, 2, 1, 2, 3]
+let array = [1, 2, 3, 1, 2, 1, 2, 3] // [1,2,3,1,2.3]
 
-function deleteNth(arr, n) {
+function deleteNth(arr,n){
     let total = {}
-    let filtered = arr.filter(num => total[num] = (++total[num]||0) < n)
-    console.log(filtered)
-}
+    return arr.filter(num => (total[num] = ++total[num]||0) < n)
+  }
 
-deleteNth(array, 2)
+console.log(deleteNth(array, 2))
