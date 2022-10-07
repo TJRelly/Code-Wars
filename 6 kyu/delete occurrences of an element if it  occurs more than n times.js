@@ -6,7 +6,7 @@ let array = [1, 2, 3, 1, 2, 1, 2, 3]
 
 function deleteNth(arr, n) {
     let total = {}
-    let filtered = arr.filter(num => total[num] = (++total[num] || 0) < n)
+    let filtered = arr.filter(num => total[num] = (++total[num]||0) < n)
     console.log(filtered)
 }
 
