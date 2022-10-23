@@ -14,4 +14,7 @@ function stray(numbers) {
     else return (numbers[0])
 }
 
-con
+const stray = nums => {
+    nums.sort((a, b) => a - b)
+    return nums[0] === nums[1] ? nums.at(-1) : nums[0]
+}
