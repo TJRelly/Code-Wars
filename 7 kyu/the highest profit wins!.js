@@ -10,8 +10,5 @@ function minMax(arr){
     return [min, max]
   }
 
-  const minMax = arr => {
-    let min = Math.min(...arr)
-    let max = Math.max(...arr)
-    return [Math.min(...arr), Math.max(...arr)]
-  }
+  const minMax = arr => [Math.min(...arr), Math.max(...arr)]
+  
