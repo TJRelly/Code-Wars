@@ -7,13 +7,20 @@ array2 = ['O', 'Q', 'R', 'S'] // 'P'
 //return the missing number and index
 //splice the missing letter
 
-const findMissingLetter = arr => {
-    for (let i = 0; i < arr.length; i++){
-      let curr = arr[i].charCodeAt(0)
-      let next = arr[i + 1].charCodeAt(0)
-      if (next - curr > 1) return String.fromCharCode(curr + 1)
+function findMissingLetter1(arr){
+    for(let i = 0; i < arr.length; i++){
+        let curr = arr[i].charCodeAt(0)
+        let next = arr[i + 1].charCodeAt(0)
+        if(next - curr > 1) return String.fromCharCode(curr + 1)
     }
-  }
+}
+// const findMissingLetter = arr => {
+//     for (let i = 0; i < arr.length; i++){
+//       let curr = arr[i].charCodeAt(0)
+//       let next = arr[i + 1].charCodeAt(0)
+//       if (next - curr > 1) return String.fromCharCode(curr + 1)
+//     }
+//   }
 
 console.log(findMissingLetter(array1))
 
