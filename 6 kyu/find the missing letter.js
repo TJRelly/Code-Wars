@@ -23,11 +23,7 @@ const findMissingLetter2 = arr => {
     }
 }
 
-const findMissingLetter = arr => {
-    arr.reduce((acc, curr, i), arr[curr])
-}
-
-function findMissingLetter4(array) {
+function findMissingLetter(array) {
     var i = array[0].charCodeAt();
     array.map(x => x.charCodeAt() == i ? i++ : i);
     return String.fromCharCode(i);
