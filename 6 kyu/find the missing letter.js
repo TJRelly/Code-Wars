@@ -29,6 +29,8 @@ function findMissingLetter(array) {
     return String.fromCharCode(i);
 }
 
+
+
 console.log(findMissingLetter(array1))
 
 console.log(findMissingLetter(array2))
