@@ -17,16 +17,18 @@ function findMissingLetter1(arr) {
 
 const findMissingLetter2 = arr => {
     for (let i = 0; i < arr.length; i++) {
-        let curr = arr[i].charCodeAt(0)
-        let next = arr[i + 1].charCodeAt(0)
+        let curr = arr[i].charCodeAt()
+        let next = arr[i + 1].charCodeAt()
         if (next - curr > 1) return String.fromCharCode(curr + 1)
     }
 }
 
 function findMissingLetter(array) {
-    var i = array[0].charCodeAt();
-    array.map(x => x.charCodeAt() == i ? i++ : i);
-    return String.fromCharCode(i);
+    let curr = array[0].charCodeAt()
+    array.map((letter) => {
+        letter.charCodeAt() === curr ? curr++ : curr
+    })
+    return String.fromCharCode(curr)
 }
 
 
