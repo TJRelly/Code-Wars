@@ -1,4 +1,10 @@
-function doubleInteger(i) {
+let integer = 5
+
+function doubleInteger1(i) {
   // i will be an integer. Double it and return it.
   return i * 2;
 }
+
+const doubleInteger = n => n * 2
+
+console.log(doubleInteger(integer))
