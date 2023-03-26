@@ -1,5 +1,5 @@
 //Rough code
-function isPangram(string){
+function isPangram(string) {
     let alphabet = 'abcdefghijklmnopqrstuvzwxyz'.split('')
     let strArr = string.toLowerCase().split('')
     //filter duplicates
@@ -7,11 +7,11 @@ function isPangram(string){
     //filter alphabet
     let output = noDupArr.filter(letter => alphabet.includes(letter))
     return output.length === 26
-  }
+}
 
 //Cleaner Code
-function isPangram(string){
+function isPangram(string) {
     //Does the string include every letter?
     let alphabet = 'abcdefghijklmnopqrstuvwxyz'
     return alphabet.split('').every(letter => string.toLowerCase().includes(letter))
-  }
+}
