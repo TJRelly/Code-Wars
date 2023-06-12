@@ -25,3 +25,9 @@ function twoArePositive(a, b, c) {
     }
     return pos === 2
   }
+
+  function twoArePositive(a, b, c) {
+    let nums = [a, b, c]
+    let pos = nums.filter(num => num > 0)
+    return pos.length === 2
+  }
