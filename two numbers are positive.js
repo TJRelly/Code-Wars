@@ -16,3 +16,12 @@ function twoArePositive(a, b, c) {
     }
     return pos === 2
   }
+
+  function twoArePositive(a, b, c) {
+    let nums = [a, b, c]
+    let pos = 0
+    for(num of nums){
+      if(num > 0) pos++
+    }
+    return pos === 2
+  }
