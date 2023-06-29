@@ -17,4 +17,6 @@ const reverse2 = str => {
 
 const reverse3 = str => str.split('').reverse().join('') 
 
+console.log(reverse(str))
+console.log(reverse2(str))
 console.log(reverse3(str))

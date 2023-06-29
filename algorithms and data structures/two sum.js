@@ -24,3 +24,12 @@ const twoSum = (nums, target) => {
         if (map[comp] && map[comp] !== j) return [map[comp], j]
     }
 };
+
+function twoSum(numbers, target) {
+    let map = {}
+    for (let i = 0; i < numbers.length; i++) {
+      let diff = target - numbers[i]
+      if (diff in map) return [map[diff], i]
+      map[numbers[i]] = i
+    }
+  }

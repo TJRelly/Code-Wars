@@ -1,0 +1,23 @@
+let var1
+console.log(var1)
+console.log(typeof var1)
+
+let var2 = null
+console.log(var2)
+console.log(typeof var2)
+
+foo = 1
+console.log(foo)
+
+// var and function bobble to the top
+
+//flatten array
+
+let arr = [
+  [1, 2],
+  [3, 4],
+  [5, [6, 7]],
+  [8, 9],
+]
+
+console.log(arr.flat(2))
