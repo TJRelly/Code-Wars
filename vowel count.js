@@ -15,6 +15,8 @@ function getCount(str) {
     }, 0)
   }
 
+  //Set O(1) is faster than includes O(n)
+
   function getCount(str) {
     let count = 0
     let vowels = new Set(['a', 'e', 'i', 'o', 'u'])
