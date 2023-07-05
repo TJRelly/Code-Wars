@@ -27,3 +27,16 @@ function countDevelopers(list) {
   }
   return europeanJSDevs
 }
+
+function countDevelopers(list) {
+  return list.reduce((acc, dev) => {
+    if (dev.continent === "Europe" && dev.language === "JavaScript") acc++
+    return acc
+  }, 0)
+}
+
+function countDevelopers(list) {
+  return list
+    .filter((dev) => dev.continent === "Europe")
+    .filter((dev) => dev.language === "JavaScript").length
+}
