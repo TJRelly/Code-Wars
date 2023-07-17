@@ -2,7 +2,7 @@
 
 let x = [1, 2, 3, 4] // 1 * 2 * 3 * 4 = 24
 
-const grow = arr => {
+const grow2 = arr => {
     let result = 1
     for (let num of arr) {
         result *= num
@@ -10,6 +10,6 @@ const grow = arr => {
     return result
 }
 
-// const grow = arr => arr.reduce((acc, curr) => acc * curr)
+const grow = arr => arr.reduce((acc, curr) => acc * curr)
 
 console.log(grow(x))
