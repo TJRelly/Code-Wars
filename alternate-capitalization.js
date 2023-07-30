@@ -20,3 +20,9 @@ function capitalize(s) {
 
   return [even, odd]
 }
+
+const capitalize = s => {
+    let even = s.split("").map((letter, i) => i % 2 === 0 ? letter.toUpperCase() : letter).join("")
+    let odd = s.split("").map((letter, i) => i % 2 !== 0 ? letter.toUpperCase() : letter).join("")
+    return [even, odd]
+  }
