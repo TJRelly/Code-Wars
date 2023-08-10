@@ -14,3 +14,10 @@ function checkCoupon(enteredCode, correctCode, currentDate, expirationDate) {
   if (current > expiration) return false
   else return true
 }
+
+function checkCoupon(enteredCode, correctCode, currentDate, expirationDate) {
+  return (
+    enteredCode === correctCode &&
+    new Date(currentDate) <= new Date(expirationDate)
+  )
+}
