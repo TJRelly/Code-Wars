@@ -20,3 +20,9 @@ function rowWeights(array){
     }
     return [team1, team2]
   }
+
+  function rowWeights(array){
+    let team1 = array.filter((weight, i) => !(i % 2)).reduce((acc, weight) => acc + weight, 0)
+    let team2 = array.filter((weight, i) => i % 2).reduce((acc, weight) => acc + weight, 0)
+    return [team1, team2]
+  }
