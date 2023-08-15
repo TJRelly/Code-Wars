@@ -10,13 +10,19 @@
 
 // 'alpha beta gamma delta'
 
-function removeDuplicateWords (s) {
-    let sentence = s.split(' ')
-    let res = []
-    console.log(sentence)
-    for (let i = 0; i < sentence.length; i++) {
-      console.log(sentence.indexOf(sentence[i]))
-      if (sentence.indexOf(sentence[i]) === i) res.push(sentence[i]) 
-    }
-    return res.join(" ")
+function removeDuplicateWords(s) {
+  let sentence = s.split(" ")
+  let res = []
+  for (let i = 0; i < sentence.length; i++) {
+    console.log(sentence.indexOf(sentence[i]))
+    if (sentence.indexOf(sentence[i]) === i) res.push(sentence[i])
   }
+  return res.join(" ")
+}
+
+const removeDuplicateWords = (str) =>
+  str
+    .split(" ")
+    .filter((word, index, arr) => arr.indexOf(word) === index)
+    .join(" ")
+
