@@ -4,10 +4,14 @@
 
 // If your name would be Jeong-Ho Aristotelis, ad would cost £600. 20 leters * 30 = 600 (Space counts as a character).
 
-function billboard(name, price = 30){
-    let total = 0
-    for(char of name) {
-      total += price
-    }
-    return total
-  } 
+function billboard(name, price = 30) {
+  let total = 0
+  for (char of name) {
+    total += price
+  }
+  return total
+}
+
+function billboard(name, price = 30) {
+  return [...name].reduce((acc) => acc + price, 0)
+}
