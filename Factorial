@@ -1,23 +1,29 @@
-function factorial(n)
-{
+function factorial(n) {
   if (n < 0 || n > 12) {
     throw new ValueError("input is not in range")
   }
-  
+
   try {
-      //base case
-      if (n === 0) return 1
-      //recursive call
-      return n * factorial(n - 1) 
-  }
-  
-  catch (error){
+    //base case
+    if (n === 0) return 1
+    //recursive call
+    return n * factorial(n - 1)
+  } catch (error) {
     console.log("Error: " + error)
   }
 }
 
-function factorial(n)
-{
-  if (n < 0 || n > 12) throw RangeError ("input must be between 0 and 12")
-  return n === 0 ? 1 : n * factorial (n - 1)
+function factorial(n) {
+  if (n < 0 || n > 12) throw RangeError("input must be between 0 and 12")
+  return n === 0 ? 1 : n * factorial(n - 1)
+}
+
+// Common factorial
+// Recursive Function
+
+const factorial = (n) => {
+  // Base Case
+  if (n === 0) return 1
+  // Recursive call
+  return n * factorial(n - 1)
 }
