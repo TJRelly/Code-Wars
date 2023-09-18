@@ -9,3 +9,12 @@ def rps(p1, p2):
         return "Player 1 won!"
     else:
         return "Player 2 won!"
+
+def rps(p1, p2):
+    win = {"rock": "scissors", "scissors":"paper", "paper":"rock"}
+    if win[p1] == p2:
+        return "Player 1 won!"
+    elif win[p2] == p1:
+        return "Player 2 won!"
+    else:
+        return "Draw!"
