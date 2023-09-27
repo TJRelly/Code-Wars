@@ -5,5 +5,5 @@
 // The array will never be empty.
 
 function getAverage(marks){
-  return Math.round(marks.reduce((acc, mark) => acc + mark)/marks.length)
+  return Math.floor(marks.reduce((acc, mark) => acc + mark)/marks.length)
 }
