@@ -37,3 +37,12 @@ function points(games) {
     return acc
   }, 0)
 }
+
+function points(games) {
+  return games.reduce((acc, score) => {
+    const x = +score[0]
+    const y = +score[2]
+    x > y ? (acc += 3) : x === y ? (acc += 1) : acc
+    return acc
+  }, 0)
+}
