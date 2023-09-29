@@ -18,12 +18,22 @@
 // 0 <= y <= 4
 
 function points(games) {
-    let total = 0
-    for (let i = 0; i < 10; i++){
-      let x = Number(games[i][0])
-      let y = Number(games[i][2])
-      if (x > y) total += 3
-      else if (x == y) total += 1
-    }
-    return total
+  let total = 0
+  for (let i = 0; i < 10; i++) {
+    let x = Number(games[i][0])
+    let y = Number(games[i][2])
+    if (x > y) total += 3
+    else if (x == y) total += 1
   }
+  return total
+}
+
+function points(games) {
+  return games.reduce((acc, game) => {
+    const x = Number(game[0])
+    const y = Number(game[2])
+    if (x > y) acc += 3
+    else if (x === y) acc += 1
+    return acc
+  }, 0)
+}
