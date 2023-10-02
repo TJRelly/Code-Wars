@@ -7,3 +7,7 @@ function arrayPlusArray(arr1, arr2) {
     let sum2 = arr2.reduce((num, acc) => num + acc)
     return sum1 + sum2
   }
+
+  function arrayPlusArray(arr1, arr2) {
+    return arr1.concat(arr2).reduce((num, acc) => num + acc)
+  }  
