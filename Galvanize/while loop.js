@@ -1,24 +1,47 @@
 function loopASequence(start, end) {
   // create a loop which runs if start is less than or equal to end
   while (start <= end) {
-      console.log(start)
-      start++
+    console.log(start)
+    start++
   }
-    // log current value of start to console
-    // increment value of start
+  // log current value of start to console
+  // increment value of start
 }
 
-loopASequence(2, 5);
+loopASequence(2, 5)
 // console output:
-  // 2
-  // 3
-  // 4
-  // 5
+// 2
+// 3
+// 4
+// 5
 
-loopASequence(3, 7);
+loopASequence(3, 7)
 // console output:
-  // 3
-  // 4
-  // 5
-  // 6
-  // 7
+// 3
+// 4
+// 5
+// 6
+// 7
+
+function loopASequenceAgain(start, end) {
+  // create a loop which loops from start to end
+  // log current value to console
+  for (let i = start; i <= end; i++) {
+    console.log(i)
+  }
+}
+
+loopASequenceAgain(2, 5)
+// console output:
+// 2
+// 3
+// 4
+// 5
+
+loopASequenceAgain(3, 7)
+// console output:
+// 3
+// 4
+// 5
+// 6
+// 7
