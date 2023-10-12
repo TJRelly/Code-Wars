@@ -27,9 +27,7 @@ function measureRequiredFruit(fruitTotals) {
   // if there are more than 3 bananas and more than 10 strawberries
     // return 'We have enough fruit, with {totalBananas} bananas, and {totalStrawberries} strawberries'
     let bananas = fruitTotals["bananas"]
-    console.log(bananas)
     let strawberries = fruitTotals["stawberries"]
-    console.log(strawberries)
     if (bananas > 3 && strawberries > 10) return "We have enough fruit , with " + bananas + " bananas, and " + strawberries + " strawberries"
   // otherwise
     // return 'We do not have enough of both fruits'
@@ -50,3 +48,4 @@ console.log('should log "We do not have enough of both fruits":', result4);
 
 var result5 = measureRequiredFruit({bananas: 3, strawberries: 9});
 console.log('should log "We do not have enough of both fruits":', result5);
+
