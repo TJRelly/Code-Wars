@@ -26,7 +26,9 @@ function assertArraysEqual(actual, expected, testName) {
   if (sameLength && hasSameItems) console.log("passed")
   else
     console.log(
-      `Failed [${testName}] Expected "${expected}" but got "${actual}"`
+      `Failed [${testName}] Expected [${expected}] but got [${actual}]
+      
+      `
     )
 }
 
