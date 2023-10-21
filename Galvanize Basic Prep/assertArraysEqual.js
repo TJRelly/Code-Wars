@@ -2,8 +2,8 @@ function assertArraysEqual(actual, expected, testName) {
   let sameLength = actual.length === expected.length
   let match = true
 
-  for (let i in actual) {
-    if (actual[i] !== expected[i] || !sameLength) {
+  for (let i = 0; i < actual.length; i++) {
+    if (actual[i] !== expected[i]) {
       match = false
       break
     }
