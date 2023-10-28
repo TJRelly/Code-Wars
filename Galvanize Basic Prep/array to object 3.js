@@ -13,11 +13,10 @@ let input = [
   ],
 ]
 
-// Output
-// [
-//     {firstName: 'Joe', lastName: 'Blow', age: 42, role: 'clerk'},
-//     {firstName: 'Mary', lastName: 'Jenkins', age: 36, role: 'manager'}
-// ]
+let output = [
+  { firstName: "Joe", lastName: "Blow", age: 42, role: "clerk" },
+  { firstName: "Mar", lastName: "Jenkins", age: 36, role: "manager" },
+]
 
 // function transformEmployeeData(employeeData) {
 //     let employeeList = []
@@ -37,18 +36,44 @@ let input = [
 //   }
 
 function transformEmployeeData(employeeData) {
-    let personList = []
-    for (let employee of employeeData){
-        let employeeObj = {}
-        for (let data of employee) {
-            let key = data[0]
-            let value = data[1]
-            employeeObj[key] = value
-        }
-        personList.push(employeeObj)
+  let employees = []
+
+  for (let i = 0; i < employeeData.length; i++) {
+    let employee = employeeData[i]
+    let employeeDetails = {}
+    for (let j = 0; j < employee.length; j++) {
+      let key = employee[j][0]
+      let value = employee[j][1]
+      employeeDetails[key] = value
     }
-    return personList
+    employees.push(employeeDetails)
+  }
+  return employees
 }
 
 console.log(transformEmployeeData(input))
 
+// Assertation
+function assertArraysEqual(actual, expected, testName) {
+  areEqualLengths = actual.length === expected.length
+  areEqualValues = true
+
+  for (let i = 0; i < actual.length; i++) {
+    if (JSON.stringify(actual[i]) !== JSON.stringify(expected[i])) {
+      areEqualValues = false
+      break
+    }
+  }
+
+  areEqualLengths && areEqualValues
+    ? console.log("passed")
+    : console.log(
+        `Failed [${testName}] Expected "${JSON.stringify(expected)}" but got "${JSON.stringify(actual)}"`
+      )
+}
+
+// Test(s)
+
+let actual = transformEmployeeData(input)
+let expected = output
+assertArraysEqual(actual, expected, "turned arrays into objects")
