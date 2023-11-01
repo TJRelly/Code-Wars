@@ -32,4 +32,6 @@ function validBraces(braces){
  } 
 
 //  Tests
-let actual = validBraces("")
+let actual = validBraces("{}")
+let expected = false
+assertEqual(actual, expected, "should return false for empty string" )
