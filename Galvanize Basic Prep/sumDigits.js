@@ -39,3 +39,25 @@ function sumNums(arr){
     }
     return sum
 }
+
+
+function findSmallestNumberAmongMixedElements(arr) {
+    //filter numbers
+    //sort smallest to greatest
+    let numbers = []
+    let smallest = ""
+    
+    for (let item of arr) {
+        if(typeof item = "number") {
+            numbers.push(item)
+        }
+    }
+    
+    for(let num of numbers) {
+        if(smallest === "") {
+            smallest = num
+        }
+    }
+    
+    return smallest
+  }
