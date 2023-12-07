@@ -17,27 +17,33 @@
 //   return acc
 // }
 
-//declare func intersection
-//input: array of arrays
-//output: array
+// //declare func intersection
+// //input: array of arrays
+// //output: array
+// function intersection(arrays) {
+//   //use reduce
+//   //acc: first array
+//   //curr: other arrays
+//   return arrays.reduce((acc, curr) => {
+//     //declare results arr
+//     let results = []
+//     //iterate curr
+//     for (let ele of curr) {
+//       //if element found in acc
+//       //push to results array
+//       if (acc.includes(ele)) results.push(ele)
+//     }
+//     //reassign acc to the results
+//     acc = results
+//     //return acc
+//     return acc
+//   })
+// }
+
 function intersection(arrays) {
-  //use reduce
-  //acc: first array
-  //curr: other arrays
-  return arrays.reduce((acc, curr) => {
-    //declare results arr
-    let results = []
-    //iterate curr
-    for (let ele of curr) {
-      //if element found in acc
-      //push to results array
-      if (acc.includes(ele)) results.push(ele)
-    }
-    //reassign acc to the results
-    acc = results
-    //return acc
-    return acc
-  })
+    return arrays.reduce((acc, curr) => {
+        return curr.filter(element => acc.includes(element))
+    })
 }
 
 // Uncomment these to check your work!
