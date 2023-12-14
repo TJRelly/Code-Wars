@@ -74,3 +74,4 @@ function decompress(str) {
 
 console.log(decompress("s4u4m6i4t13")); //ssssuuuummmmmmiiiittttttttttttt
 console.log(decompress("y107")); 
+
