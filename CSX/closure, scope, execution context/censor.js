@@ -9,10 +9,10 @@ function censor() {
       pairs[str1] = str2
     } else {
       //if one string - replace obj key w/ obj value within the string.
-      let updatedStr; 
+      let updatedStr = str1
       for (let key in pairs) {
         let value = pairs[key]
-        updatedStr = str1.replace(key, value)
+        updatedStr = updatedStr.replace(key, value)
       }
       return updatedStr
     }
