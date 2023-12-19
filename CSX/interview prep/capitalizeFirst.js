@@ -21,3 +21,16 @@
   }
   
 console.log(capitalizeFirst(['car','taco','banana'])); // ['Car','Taco','Banana'])
+
+function makePerson(name, age) {
+	this.name = name
+  this.age = age
+
+}
+
+const vicky = makePerson('Vicky', 24);
+
+
+// /********* Uncomment these lines to test your work! *********/
+console.log(vicky.name); // -> Logs 'Vicky'
+console.log(vicky.age); // -> Logs 24
