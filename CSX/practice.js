@@ -95,3 +95,21 @@ function reverseWords(inputString) {
 // console.log(reverseWords("JavaScript is fun!")); // "fun! is JavaScript"
 // console.log(reverseWords("  OpenAI   GPT-3  ")); // "GPT-3 OpenAI"
 // console.log(reverseWords("")); // ""
+
+function disemvowel(string) {
+    let output = ""
+    //define vowels
+    const vowels = "aeiou"
+    //iterate the string ignoring variables
+    for(const char of string) {
+      //account for capitalization
+      if(!vowels.includes(char.toLowerCase())) output += char
+    }
+    //return new string w/o vowels
+    return output
+  }
+  
+  // Uncomment these to check your work!
+//   console.log(disemvowel('CodeSmith')); // => 'CdSmth'
+//   console.log(disemvowel('BANANA')); // => 'BNN'
+//   console.log(disemvowel('hello world')); // => 'hll wrld'
