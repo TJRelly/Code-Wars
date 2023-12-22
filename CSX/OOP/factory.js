@@ -15,14 +15,16 @@ function userFactory(name, score) {
 /*** CHALLENGE 10 ***/
 
 const adminFunctionStore = {
-  admin: userFunctionStore,
+  __proto__: userFunctionStore,
 };
 
 /*** CHALLENGE 11, 12, 13 ***/
 
 function adminFactory(name, score) {
-  let admin = new userFactory(name, score);
+  let admin = Object.create(adminFunctionStore);
   admin.type = "Admin";
+  admin.name = name;
+  admin.score = score;
   return admin;
 }
 
@@ -33,7 +35,9 @@ adminFunctionStore.sharePublicMessage = function () {
 };
 
 const adminFromFactory = adminFactory("Eva", 5);
-
+console.log(adminFromFactory.name)
 // /********* Uncomment these lines to test your work! *********/
 adminFromFactory.sayType(); // -> Logs "I am a Admin"
 adminFromFactory.sharePublicMessage(); // -> Logs "Welcome users!"
+let user = new userFactory("Tom", 7)
+console.log(user.name)
