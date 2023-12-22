@@ -18,7 +18,7 @@ function prioritize(arr, cb) {
     // //return concat results arrays
     // return trueResults.concat(falseResults)
     let first = arr.filter(str => cb(str))
-       let second = arr.filter(str => !cb(str))
+   let second = arr.filter(str => !cb(str))
     return first.concat(second)
   }
   

@@ -34,22 +34,26 @@ function subtractOne(num) {
 // console.log(subtractOne(8))
 
 //use premade functions to increment
-//if A immediately follows increment
-//if B decrement
+//if A immediately follows increment the previous #
+//if B immediately follows increment the previous #
+//otherwise leave number alone
 
 //declare func usePotion //input: string
 function usePotion (str) {
-    let newStr = ""
-    //interate the string
-    for(let i = 0; i < str.length; i++) {
-        //if A after element increment and concat
-        if(str[i + 1] === "A") newStr += addOne(Number(str[i]))
-        //if B decrement and concat
-        else if(str[i + 1] === "B") newStr += subtractOne(Number(str[i]))
-        //otherwise concat only if not A and not B is true
-        else if(str[i] !== "A" && str[i] !== "B") newStr += str[i]
+    //declare empty output string
+    let output = ""
+    //iterate input string
+    
+    for (let i = 0; i < str.length; i++) {
+        //if A is next increment and concat
+        if(str[i + 1] === "A") output += addOne(Number(str[i]))
+        //if B is next decrement and concat
+        else if(str[i + 1] === "B") output += subtractOne(Number(str[i]))
+        //otherwise if number concat
+        else if(Number(str[i])) output += str[i] 
     }
-    return newStr
+    //output: str w/out A and B
+    return output
 }
     
 
