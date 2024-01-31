@@ -10,8 +10,8 @@ function countWords(stringOfWords) {
   }, {});
 }
 
-const result1 = countWords("ask a bunch get a bunch");
+var result1 = countWords("ask a bunch get a bunch");
 console.log('should log "{ask: 1, a: 2, bunch: 2, get: 1}":', result1);
 
-const result2 = countWords("");
+var result2 = countWords("");
 console.log('should log "{}":', result2);
