@@ -5,3 +5,4 @@ def get_grade(s1, s2, s3):
     if average >= 70: return "C"
     if average >= 60: return "D"
     return "F"
+
